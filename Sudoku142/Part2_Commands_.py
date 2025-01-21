@@ -1,4 +1,4 @@
-﻿from jeuSudoku import *
+﻿from Part1 import *
 
 def afficherGrille(grille):
     '''
@@ -68,17 +68,17 @@ while choix < 3 and choix > 0:
                     [9, 8, 3, 1, 2, 5, 6, 7, 4],
                     [2, 5, 0, 8, 4, 6, 9, 3, 1]]  # la seule matrice utilisé dans le programme.
       afficherGrille(grille)
-      row = int(input("entrez votre choix de case ligne "))
-      col = int(input("entrez votre choix de case col "))
-      num = int(input("entrez votre choix de case num "))
+      row = int(input("Veuillez entrer votre choix de case rangée "))
+      col = int(input("Veuillez entrer votre choix de case colonne "))
+      num = int(input("Veuillez entrer votre choix de case numéro "))
       if grille[row][col] == 0:
           ajout = jouer(grille, row, col, num)
           if ajout == True:
               print("Bravo!!")
           else:
-              print("Echec :(")
+              print("échec :(")
       else:
-          print("Case deja rempli")
+          print("Case déjà remplie")
       afficherGrille(grille)
       if verifierGagner(grille) == True:
           print("Bravo!! Vous avez gagne")
